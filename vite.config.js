@@ -9,7 +9,7 @@ import {PrimeVueResolver} from '@primevue/auto-import-resolver'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/jing-travel-services/',
+  base: 'https://minusarko.github.io/visawebsite/',
   plugins: [
     vue(),
     vueDevTools(),
