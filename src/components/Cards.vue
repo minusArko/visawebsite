@@ -1,6 +1,8 @@
 <script setup>
 
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 
 const props = defineProps({
     title: {
@@ -15,13 +17,13 @@ const props = defineProps({
         type: String,
         default: 'image'
     },
-    buttonText: {
-        type: String,
-        default: 'Learn More'
-    },
     price: {
         type: String,
         default: 'Price not available'
+    },
+    buttonRoute: {
+        type: String,
+        default: '#'
     }
 });
 
@@ -35,9 +37,14 @@ const props = defineProps({
         <template #title> {{ props.title }}</template>
         <template #subtitle> {{ props.price }}</template>
         <template #content> 
-            <p class="m-0">
+            <p class="m-0 min-h-30">
                 {{ props.description }}
             </p>
+        </template>
+        <template #footer>
+            <Button class="w-full ">
+                <RouterLink :to="props.buttonRoute" style="text-decoration: none; color: black;">{{ t('learnMore') }}</RouterLink>
+            </Button>
         </template>
     </Card>
 </template>

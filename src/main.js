@@ -8,14 +8,16 @@ import App from './App.vue'
 import Aura from '@primeuix/themes/aura'
 import PrimeVue from 'primevue/config'
 import { createI18n } from 'vue-i18n'
+import { createMemoryHistory, createRouter } from 'vue-router'
+import router from './routes.js'
 
 const i18n = createI18n ({
     legacy: false,
-    locale: 'zh-CN',
+    locale: 'en-US',
     fallbackLocale: 'en-US',
     messages: {
         'en-US': {
-            navTitle: 'Jing\'s Travel Services',
+            navTitle: 'Jing\'s Visa Services',
             navHome: 'Home',
             navServices: 'Services',
             navContact: 'Contact',
@@ -40,9 +42,10 @@ const i18n = createI18n ({
             locationDescription: 'Pacific Asian Plaza, 5115 Spring Mountain Rd, Las Vegas #201k',
             email: 'Email',
             phone: 'Phone',
+            learnMore: 'Learn More'
         },
         'zh-CN': {
-            navTitle: 'Jing\'s Travel Services',
+            navTitle: 'Jing\'s Visa Services',
             navHome: '首页',
             navServices: '服务',
             navContact: '联系',
@@ -67,6 +70,7 @@ const i18n = createI18n ({
             locationDescription: 'Pacific Asian Plaza, 5115 Spring Mountain Rd, Las Vegas #201k',
             email: '电子邮件',
             phone: '电话',
+            learnMore: '其他信息'
         },
     }
 })
@@ -79,4 +83,5 @@ app.use(PrimeVue, {
     }
 })
 app.use(i18n)
+app.use(router)
 app.mount('#app')

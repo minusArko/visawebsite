@@ -6,7 +6,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <div class="text-white">
+    <div id="contact"class="text-white">
         <h1 class="text-4xl bg-gray-900 text-white font-bold text-center mb-8 p-4">{{t('contactTitle')}}</h1>
     </div>   
     <div class="text-center p-4">

@@ -1,14 +1,16 @@
 <script setup>
 
-import Mainpage from './components/Mainpage.vue';
-import Tutorial from './components/Tutorial.vue';
 
 </script>
 
 
 <template :data-bs-theme="light">
   <div>
-    <Mainpage> </Mainpage>
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 

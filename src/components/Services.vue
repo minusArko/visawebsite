@@ -23,6 +23,7 @@ const { t } = useI18n();
             :imageUrl="cnVisaImg"
             buttonText="Learn More" 
             :price="t('visaPrice')"
+            :buttonRoute="'/cnVisa'"
         />
         <Cards 
             :title="t('apostilleTitle')"
