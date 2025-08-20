@@ -1,7 +1,8 @@
 <script setup>
-
+import { useRouter } from 'vue-router';   
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
+const router = useRouter();
 
 const props = defineProps({
     title: {
@@ -26,6 +27,9 @@ const props = defineProps({
     }
 });
 
+const handleNav = () => {
+    router.push(props.buttonRoute);
+}
 </script>
 
 <template>
@@ -41,8 +45,8 @@ const props = defineProps({
             </p>
         </template>
         <template #footer>
-            <Button class="w-full ">
-                <RouterLink :to="props.buttonRoute" style="text-decoration: none; color: black;">{{ t('learnMore') }}</RouterLink>
+            <Button @click="handleNav" class="w-full ">
+                {{ t('learnMore') }}
             </Button>
         </template>
     </Card>
