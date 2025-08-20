@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue';
 import Cards from './Cards.vue';
 import cnVisaImg from '@/assets/cn_visa.jpg';
 import apostilleImg from '@/assets/apostille.jpg';
@@ -13,7 +12,7 @@ const { t } = useI18n();
 
 
 <template>
-    <div class="text-white">
+    <div id="services" class="text-white">
         <h1 class="text-4xl bg-gray-900 text-white font-bold text-center mb-8 p-4">{{t('servicesTitle')}}</h1>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
@@ -31,6 +30,7 @@ const { t } = useI18n();
             :imageUrl="apostilleImg"
             buttonText="Learn More" 
             :price="t('apostillePrice')"
+            :buttonRoute="'/apostille'"
         />
         <Cards 
             :title="t('passportTitle')"
@@ -38,6 +38,7 @@ const { t } = useI18n();
             :imageUrl="passportImg"
             buttonText="Learn More" 
             :price="t('passportPrice')"
+            :buttonRoute="'/passport'"
         />
         <Cards 
             :title="t('notaryTitle')" 
@@ -45,13 +46,7 @@ const { t } = useI18n();
             :imageUrl="notaryImg"
             buttonText="Learn More" 
             :price="t('notaryPrice')"
-        />
-        <Cards 
-            :title="t('planeTitle')"
-            :description="t('planeDescription')"
-            :imageUrl="planeImg"
-            buttonText="Learn More" 
-            :price="t('planePrice')"
+            :buttonRoute="'/notary'"
         />
     </div>
 </template>
