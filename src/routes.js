@@ -1,4 +1,4 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
 import Mainpage from '@/components/Mainpage.vue'
 import CnVisa from '@/components/CnVisa.vue'
 import Apostille from '@/components/Apostille.vue'
