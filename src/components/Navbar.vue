@@ -1,10 +1,11 @@
 <script setup>
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 const { t, locale, availableLocales } = useI18n({useScope: 'global'});
 
 const router = useRouter();
+const route = useRoute();
 
 const navbarItems = ref([
     {
@@ -13,7 +14,12 @@ const navbarItems = ref([
     {
         label: t('navHome'),
         command: () => {
-            router.push({ name: 'Home'});
+            if (route.name === 'Home') {
+                document.querySelector('#top').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                router.push({ name: 'Home'});
+            }
+            
         }
     },
     {
@@ -25,6 +31,9 @@ const navbarItems = ref([
     },
     {
         label: t('navContact'),
+        command: () => {
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        }
     }
 ])
 </script>

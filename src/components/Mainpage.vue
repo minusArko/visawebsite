@@ -12,8 +12,9 @@ import { useI18n } from 'vue-i18n';
     
     
     <Navbar></Navbar>
-    <img src="@/assets/placeholder.jpg" alt="placeholder" /></img>
-    
+    <div id='top'>
+        <img src="@/assets/placeholder.jpg" alt="placeholder" /></img>
+    </div>
     <Services></Services>
     <Contact></Contact>
     
