@@ -9,7 +9,7 @@
     <NavbarAlt></NavbarAlt>
     <div class = "text-center p-4">
         <div class="card p-6 max-w-4xl mx-auto">
-            <div class="visa-content text-left" v-html="t('passportMoreInfo')"></div>
+            <div class="visa-content text-left" v-html="t('greenCardMoreInfo')"></div>
         </div>
     </div>
         

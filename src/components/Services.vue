@@ -41,6 +41,14 @@ const { t } = useI18n();
             :buttonRoute="'/passport'"
         />
         <Cards 
+            :title="t('greenCardTitle')" 
+            :description="t('greenCardDescription')"
+            :imageUrl="notaryImg"
+            buttonText="Learn More" 
+            :price="t('greenCardPrice')"
+            :buttonRoute="'/greenCard'"
+        />
+        <Cards 
             :title="t('notaryTitle')" 
             :description="t('notaryDescription')"
             :imageUrl="notaryImg"
@@ -48,6 +56,15 @@ const { t } = useI18n();
             :price="t('notaryPrice')"
             :buttonRoute="'/notary'"
         />
+        <Cards 
+            :title="t('reentryPermitTitle')" 
+            :description="t('reentryPermitDescription')"
+            :imageUrl="notaryImg"
+            buttonText="Learn More" 
+            :price="t('reentryPermitPrice')"
+            :buttonRoute="'/reentryPermit'"
+        />
+        
     </div>
 </template>
 

@@ -4,7 +4,8 @@ import CnVisa from '@/components/CnVisa.vue'
 import Apostille from '@/components/Apostille.vue'
 import PassportRenewal from '@/components/PassportRenewal.vue'
 import Notary from '@/components/Notary.vue'
- 
+import GreenCard from '@/components/GreenCard.vue'
+import ReentryPermit from '@/components/ReentryPermit.vue'
 const routes = [
     { 
         path: '/',
@@ -31,6 +32,16 @@ const routes = [
         name: 'Notary',
         component: Notary
     },
+    {
+        path: '/greencard',
+        name: 'GreenCard',
+        component: GreenCard
+    },
+    {
+        path: '/reentryPermit',
+        name: 'ReentryPermit',
+        component: ReentryPermit
+    }
 
 ]
 
