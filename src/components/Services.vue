@@ -4,7 +4,8 @@ import cnVisaImg from '@/assets/cn_visa.jpg';
 import apostilleImg from '@/assets/apostille.jpg';
 import passportImg from '@/assets/passport.jpg';
 import notaryImg from '@/assets/notary.jpg';
-import planeImg from '@/assets/plane.jpg';
+import greenCardImg from '@/assets/greecard.jpg';
+import reentryImg from '@/assets/reentry.jpg';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
@@ -43,7 +44,7 @@ const { t } = useI18n();
         <Cards 
             :title="t('greenCardTitle')" 
             :description="t('greenCardDescription')"
-            :imageUrl="notaryImg"
+            :imageUrl="greenCardImg"
             buttonText="Learn More" 
             :price="t('greenCardPrice')"
             :buttonRoute="'/greenCard'"
@@ -59,7 +60,7 @@ const { t } = useI18n();
         <Cards 
             :title="t('reentryPermitTitle')" 
             :description="t('reentryPermitDescription')"
-            :imageUrl="notaryImg"
+            :imageUrl="reentryImg"
             buttonText="Learn More" 
             :price="t('reentryPermitPrice')"
             :buttonRoute="'/reentryPermit'"

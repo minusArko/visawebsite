@@ -127,6 +127,31 @@ const i18n = createI18n ({
                     <li>Current passport</li>
                 </ol>
             `,
+            notaryMoreInfo: `
+                <h2>Documents to bring:</h2>
+                
+                <ol>
+                    <li>ID/Driver's License and/or passport</li>
+                    <li>Document to be notarized</li>
+                </ol>
+            `,
+            apostilleMoreInfo: `
+                <h2>Apostille Services:</h2>
+                
+                <ol>
+                    <li>Power of attorney (for real estate transactions and related matters)</li>
+                    <li>Declaration of single status, change of ownership and inheritance rights.</li>
+                    <li>Marriage, Death, Birth certificates.</li>
+                    <li>China Pension Verification form</li>
+                </ol>
+                
+                <h2>Documents to bring:</h2>
+                
+                <ol>
+                    <li>ID/Driver's License</li>
+                </ol>
+            `
+
 
             },
         'zh-CN': {
@@ -240,6 +265,30 @@ const i18n = createI18n ({
                     <li>有效护照</li>
                 </ol>
             `,
+            notaryMoreInfo: `
+                <h2>需要携带的文件：</h2>
+                
+                <ol>
+                    <li>身份证/驾驶执照和/或护照</li>
+                    <li>需要公证的文件</li>
+                </ol>
+            `,
+            apostilleMoreInfo: `
+                <h2>海牙认证服务：</h2>
+                
+                <ol>
+                    <li>委托书（房地产交易及相关事务）</li>
+                    <li>单身声明、所有权变更和继承权声明</li>
+                    <li>结婚证、死亡证明、出生证明</li>
+                    <li>中国养老金验证表</li>
+                </ol>
+                
+                <h2>需要携带的文件：</h2>
+                
+                <ol>
+                    <li>身份证/驾驶执照</li>
+                </ol>
+            `
         },
     }
 })
